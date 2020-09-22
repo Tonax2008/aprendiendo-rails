@@ -1,0 +1,13 @@
+<h1>New file</h1>
+
+<%=form_for :doc , url: docs_path do |f| %>
+    <%= f.label :description %><br>
+    <%= f.text_field  :description %><br>
+    <%= f.label :student %><br>
+    <%= f.text_field  :student %><br>
+    <%= f.label :Materia %><br>
+    <%= f.text_field  :materia %><br>
+
+
+    <%=f.submit%>
+<% end%>

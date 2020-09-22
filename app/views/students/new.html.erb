@@ -1,0 +1,15 @@
+<h1>Students</h1>
+<br>
+
+
+<%=form_for :student, url: students_path do |f| %>
+    <%= f.label :Matricula %><br>
+    <%= f.text_field  :matricula %><br>
+    <%= f.label :Nombre %><br>
+    <%= f.text_field  :name %><br>
+    <%= f.label :Promedio %><br>
+    <%= f.text_field  :promedio %><br>
+
+
+    <%=f.submit%>
+<% end%>

@@ -1,0 +1,15 @@
+<h1>Professor new</h1>
+<br>
+
+
+<%=form_for @professor, url: professor_path  do |f| %>
+    <%= f.label :Matricula %><br>
+    <%= f.text_field  :matricula %><br>
+    <%= f.label :Nombre %><br>
+    <%= f.text_field  :name %><br>
+    <%= f.label :Apellido %><br>
+    <%= f.text_field  :last_name %><br>
+
+
+    <%=f.submit%>
+<% end%>

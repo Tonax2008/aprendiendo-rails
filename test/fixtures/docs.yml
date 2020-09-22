@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+   description: MyString
+  student: MyString
+  materia: 9.99
+
+two:
+   description: MyString
+  student: MyString
+  materia: 9.99
