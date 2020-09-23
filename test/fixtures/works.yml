@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  matricula_Student: one
+  code_task: one
+  send: one
+
+two:
+  matricula_Student: two
+  code_task: two
+  send: two

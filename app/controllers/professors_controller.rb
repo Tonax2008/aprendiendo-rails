@@ -7,20 +7,26 @@ class ProfessorsController < ApplicationController
   end
 
   def index
+    @professor =Professor.all
   end
 
 
   def create 
       @professor=Professor.new professor_paramns
-      raise
+    
       @professor.save
-      debugger 
+      #debugger 
+      redirect_to @professor
   end
 
     private
 
   def professor_paramns
       params.require(:professor).permit(:matricula,:name,:last_name)
+  end
+
+  def show
+    @professor = Professor.find params[:id ]
   end
 
     

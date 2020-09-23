@@ -1,2 +1,15 @@
-<h1>Works#new</h1>
-<p>Find me in app/views/works/new.html.erb</p>
+<h1>Works new</h1>
+<br>
+
+
+<%=form_for @works, url: works_path  do |f| %>
+    <%= f.label :Matricula_Studiante %><br>
+    <%= f.text_field  :matricula_Student %><br>
+    <%= f.label :Codigo_tarea %><br>
+    <%= f.text_field  :code_task %><br>
+    <%= f.label :Entregado %><br>
+    <%= f.text_field  :send %><br>
+   
+
+    <%=f.submit%>
+<% end%>

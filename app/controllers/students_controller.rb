@@ -2,20 +2,20 @@ class StudentsController < ApplicationController
 
 
     def new
-        @Student.new
+        @student =Student.new
     end
 
     
 
     def create 
-        @student= ::Students.new student_paramns
+        @student= Student.new student_paramns
         @student.save
     end
 
     private
 
     def student_paramns
-        params.require(:student).permit(:matricula,:name,:promedio)
+        params.require(:student).permit(:matricula_Student,:name,:promedio,:last_name)
     end
 
     

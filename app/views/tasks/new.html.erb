@@ -1,2 +1,14 @@
-<h1>Tasks#new</h1>
-<p>Find me in app/views/tasks/new.html.erb</p>
+<h1>Tareas new</h1>
+<br>
+
+
+<%=form_for @task, url: tasks_path  do |f| %>
+    
+    <%= f.label :Codigo_tarea %><br>
+    <%= f.text_field  :code_task %><br>
+    <%= f.label :materia %><br>
+    <%= f.text_field  :code_subject_id %><br>
+   
+
+    <%=f.submit%>
+<% end%>

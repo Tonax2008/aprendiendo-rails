@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  code_group: one
+  matricula_student: one
+  quota: 9.99
+
+two:
+  code_group: two
+  matricula_student: two
+  quota: 9.99

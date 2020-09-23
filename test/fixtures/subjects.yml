@@ -1,11 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  code_subject: MyString
   name: MyString
-  matricula: 9.99
-  last_name: MyString
+  degree: MyString
+  level: 9.99
 
 two:
+  code_subject: MyString
   name: MyString
-  matricula: 9.99
-  last_name: MyString
+  degree: MyString
+  level: 9.99

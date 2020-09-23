@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  code_schedule: MyString
+  code_group: one
+  matricula_professor: one
+
+two:
+  code_schedule: MyString
+  code_group: two
+  matricula_professor: two
