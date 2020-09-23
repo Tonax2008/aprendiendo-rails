@@ -1,10 +1,10 @@
 class WorksController < ApplicationController
   def new
-  @works = Work.new
+  @work = Work.new
   end
 
   def create 
-      @work=Works.new work_paramns
+      @work=Work.new work_paramns
     
       @work.save
       #debugger 
@@ -13,7 +13,7 @@ class WorksController < ApplicationController
     private
 
   def work_paramns
-      params.require(:work).permit(:matricula_student,:code_task,:send)
+      params.require(:work).permit(:task_id,:student_id,:send)
   end
 
   def edit

@@ -1,5 +1,4 @@
 class Schedule < ApplicationRecord
-  belongs_to :code_group
-  belongs_to :matricula_professor
+  belongs_to :group
+  belongs_to :professor
 end
- 

@@ -1,4 +1,4 @@
 class Hour < ApplicationRecord
-  belongs_to :code_group
-  belongs_to :matricula_student
+  belongs_to :group
+  belongs_to :student
 end

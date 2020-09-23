@@ -4,10 +4,10 @@
 
 <%=form_for @task, url: tasks_path  do |f| %>
     
-    <%= f.label :Codigo_tarea %><br>
-    <%= f.text_field  :code_task %><br>
+    <%= f.label :Tarea %><br>
+    <%= f.text_field  :name %><br>
     <%= f.label :materia %><br>
-    <%= f.text_field  :code_subject_id %><br>
+    <%= f.text_field  :subject_id %><br>
    
 
     <%=f.submit%>

@@ -10,11 +10,6 @@ class SchedulesController < ApplicationController
       #debugger 
   end
 
-    private
-
-  def schedule_paramns
-      params.require(:schedule).permit(:code_schedule,:code_group,:matricula_professor)
-  end
 
 
   def edit
@@ -24,5 +19,10 @@ class SchedulesController < ApplicationController
   end
 
   def show
+  end
+    private
+
+  def schedule_paramns
+      params.require(:schedule).permit(:group_id,:professor_id)
   end
 end

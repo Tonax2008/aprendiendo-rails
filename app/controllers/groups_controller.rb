@@ -1,22 +1,32 @@
 class GroupsController < ApplicationController
   def new
   @group = Group.new
-  end
+  end 
 
-    def create 
-      @group=Group.new group_paramns
+  def create 
+    @group=Group.new group_paramns
     
-      @group.save
-      #debugger 
+    #raise
+    @group.save
+    redirect_to @group
+    
   end
 
-    private
+  def show 
+    @group = Group.find params[:id]
+  end
+
+  def index
+    @group =Group.all
+  end
+
+
+  private
 
   def group_paramns
-      params.require(:group).permit(:code_group,:code_subject_id)
+    params.require(:group).permit(:room,:subject_id)
   end
   
 
-  def create
-  end
+  
 end

@@ -15,7 +15,7 @@ class StudentsController < ApplicationController
     private
 
     def student_paramns
-        params.require(:student).permit(:matricula_Student,:name,:promedio,:last_name)
+        params.require(:student).permit(:last_name,:name,:promedio,:last_name)
     end
 
     

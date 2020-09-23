@@ -1,9 +1,9 @@
 class ProfessorsController < ApplicationController
   
+  before_action :find_professor, only: [:edit, :update, :show, :destroy]
 
   def new
-  
-  @professor = Professor.new
+    @professor = Professor.new
   end
 
   def index
@@ -19,16 +19,33 @@ class ProfessorsController < ApplicationController
       redirect_to @professor
   end
 
-    private
-
-  def professor_paramns
-      params.require(:professor).permit(:matricula,:name,:last_name)
-  end
-
   def show
     @professor = Professor.find params[:id ]
   end
 
+  def edit
+    @professor = Professor.find params[:id ]
+  end
+
+  def update
+    #find_professor
+    @professor.update professor_paramns
+    redirect_to @professor
+  end
+  
+  def destroy
+    @professor.destroy
+    redirect_to @professor
+  end
+  private
+
+  def professor_paramns
+      params.require(:professor).permit(:area,:name,:last_name)
+  end
+
+  def find_professor
+    @professor =Professor.find params[:id]
+  end
     
 end
 

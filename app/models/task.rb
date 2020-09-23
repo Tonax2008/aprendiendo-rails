@@ -1,3 +1,3 @@
 class Task < ApplicationRecord
-  belongs_to :code_subject
+  belongs_to :subject
 end

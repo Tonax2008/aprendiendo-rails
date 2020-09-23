@@ -23,13 +23,14 @@ Rails.application.routes.draw do
   # get 'group/create'
   # get 'professor/new_professor'
   # get 'professor/update_professor'
-  resources :professors , only: [:index, :create, :show, :destroy,:new] 
+  resources :professors , only: [:index, :create, :show, :destroy,:new,:edit,:update] 
   resources :hours , only: [:index, :create, :show, :destroy,:new] 
   resources :schedules , only: [:index, :create, :show, :destroy,:new] 
   resources :works , only: [:index, :create, :show, :destroy,:new] 
-  resources :groups , only: [:index, :create, :show, :destroy,:new] 
+  resources :groups , only: [:index, :create, :show, :destroy,:new,] 
   resources :tasks , only: [:index, :create, :show, :destroy,:new] 
   resources :students , only: [:index, :create, :show, :destroy,:new] 
+  resources :subjects , only: [:index, :create, :show, :destroy,:new] 
   resources :docs 
   get 'say/new'
   get 'say/hello'

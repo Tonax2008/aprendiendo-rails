@@ -13,7 +13,7 @@ class SubjectsController < ApplicationController
     private
 
   def subject_paramns
-      params.require(:subject).permit(:code_subject,:name,:degree,:level)
+      params.require(:subject).permit(:name,:degree,:level)
   end
 
   

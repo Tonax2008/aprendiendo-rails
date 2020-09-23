@@ -2,10 +2,10 @@
 
 one:
   name: MyString
-  matricula: 9.99
   last_name: MyString
+  area: MyString
 
 two:
   name: MyString
-  matricula: 9.99
   last_name: MyString
+  area: MyString

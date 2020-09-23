@@ -1,3 +1,3 @@
 class Professor < ApplicationRecord
-validates :name, presence: true 
+has_many :schedule
 end

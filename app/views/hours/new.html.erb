@@ -3,11 +3,11 @@
 
 
 <%=form_for @hour, url: hours_path  do |f| %>
-    <%= f.label :Codigo_Grupo %><br>
-    <%= f.text_field  :code_group_id %><br>
-    <%= f.label :Matricula_Alumno %><br>
-    <%= f.text_field  :matricula_student_id %><br>
-    <%= f.label :cupo %><br>
+    <%= f.label :Alumno %><br>
+    <%= f.text_field  :student_id %><br>
+    <%= f.label :Grupo %><br>
+    <%= f.text_field  :group_id %><br>
+    <%= f.label :Cupo %><br>
     <%= f.text_field  :quota %><br>
    
 

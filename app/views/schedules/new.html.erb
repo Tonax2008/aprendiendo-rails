@@ -2,14 +2,12 @@
 <br>
 
 
-<%=form_for @schedule, url: schedules_path  do |f| %>
-    <%= f.label :Codigo_Horario %><br>
-    <%= f.text_field  :code_schedule %><br>
-    <%= f.label :Codigo_Grupo %><br>
-    <%= f.text_field  :code_group %><br>
-    <%= f.label :Matricula_Profesor %><br>
-    <%= f.text_field  :matricula_professor %><br>
-   
+<%=form_for @schedule  do |f| %>
+    <%= f.label :Grupo %><br>
+    <%= f.text_field  :group_id %><br>
+    <%= f.label :Profesor %><br>
+    <%= f.text_field  :professor_id %><br>
+    
 
     <%=f.submit%>
 <% end%>

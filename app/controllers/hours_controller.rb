@@ -13,7 +13,7 @@ class HoursController < ApplicationController
     private
 
   def hours_paramns
-      params.require(:hours).permit(:code_group_id,:matricula_student_id,:quota)
+      params.require(:hour).permit(:quota,:group_id,:student_id)
   end
 
 
