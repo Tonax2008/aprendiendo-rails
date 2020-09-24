@@ -1,4 +1,6 @@
 class HoursController < ApplicationController
+
+  before_action :select_id,only: [:edit, :update, :show, :destory]
   def new
   @hour = Hour.new
   end
@@ -10,13 +12,6 @@ class HoursController < ApplicationController
       #debugger 
   end
 
-    private
-
-  def hours_paramns
-      params.require(:hour).permit(:quota,:group_id,:student_id)
-  end
-
-
   def edit
   end
 
@@ -25,4 +20,20 @@ class HoursController < ApplicationController
 
   def show
   end
+
+  def destroy
+    redirect_to @hour
+  end
+  
+  private
+
+  def hours_paramns
+      params.require(:hour).permit(:quota,:group_id,:student_id)
+  end
+
+  def select_id
+    @hour =Hour.find params[:id]
+  end
+
+
 end

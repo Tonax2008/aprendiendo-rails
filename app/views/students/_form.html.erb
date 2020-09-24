@@ -1,0 +1,12 @@
+
+<%=form_for :student do |f| %>
+    <%= f.label :Nombre %><br>
+    <%= f.text_field  :name %><br>
+    <%= f.label :Apellido %><br>
+    <%= f.text_field  :last_name %><br>
+    <%= f.label :Promedio %><br>
+    <%= f.text_field  :promedio %><br>
+
+
+    <%=f.submit%>
+<% end%>

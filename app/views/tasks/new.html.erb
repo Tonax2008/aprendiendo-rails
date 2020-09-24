@@ -1,6 +1,9 @@
 <h1>Tareas new</h1>
 <br>
 
+<%- if @task.errors.any?%>
+    <p> Ha ocurrido un error</p>
+<%end %>
 
 <%=form_for @task, url: tasks_path  do |f| %>
     

@@ -1,5 +1,6 @@
 <h1>Schedule#index</h1>
 <%= @schedule.each do |schedule| %>
+<%= @schedue.group_id%>
 <%= link_to "Editar", edit_schedule_path %> 
 <%= link_to 'Eliminar',schedule , method: :delete,:data{confirm: 'Seguro deseas Eliminar'} %>
 <br>

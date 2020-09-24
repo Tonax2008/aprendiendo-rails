@@ -9,8 +9,11 @@ class WorksController < ApplicationController
   
       @work=Work.new work_paramns
     
-      @work.save
-      #debugger 
+      if @work.save
+        redirect_to work_path
+      else
+        puts "ocurrio un error al guardar #{ @work.errors}"
+      end
   end
 
 

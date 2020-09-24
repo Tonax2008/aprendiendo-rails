@@ -7,11 +7,13 @@ class TasksController < ApplicationController
   end
 
   def create 
-      @task=Task.new task_paramns
-    
-      @task.save
-      #debugger 
-      redirect_to @task
+    @task=Task.new task_paramns
+  
+    if @task.save
+    redirect_to task_path
+    else
+      puts "error al guardar  #{@task.errors}"
+    end
   end
 
   def edit
@@ -25,7 +27,10 @@ class TasksController < ApplicationController
   end
 
   def destroy
-    redirect_to @task
+    if @task.destory
+      puts 'Se elimino correctamente'
+      redirect_to @task
+    end
   end
   
 

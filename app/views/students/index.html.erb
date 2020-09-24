@@ -1,0 +1,7 @@
+<h1>Alumnos Index</h1>
+<%= @student.each do |student| %>
+<%= @student.name %>
+<%= link_to "Editar", edit_student_path %> 
+<%= link_to 'Eliminar',student , method: :delete,:data{confirm: 'Seguro deseas Eliminar'} %>
+<br>
+<% end %>

@@ -7,7 +7,9 @@ class SubjectsController < ApplicationController
   def create 
       @subject=Subject.new subject_paramns
     
-      @subject.save
+      if @subject.save
+        redirect_to subject_path
+      end
       #debugger 
   end
 
