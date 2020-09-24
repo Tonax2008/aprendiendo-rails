@@ -1,14 +1,4 @@
 <h1>Groups new</h1>
 <br>
 
-
-<%=form_for @group, url: groups_path  do |f| %>
-    <%= f.label :Salon %><br>
-    <%= f.text_field :room %><br>
-    <%= f.label :materia_id %><br>
-    <%= f.text_field  :subject_id %><br>
-
-   
-
-    <%=f.submit%>
-<% end%>
+<%= render 'form' %>

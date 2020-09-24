@@ -1,2 +1,6 @@
 <h1>Schedule#index</h1>
-<p>Find me in app/views/schedule/index.html.erb</p>
+<%= @schedule.each do |schedule| %>
+<%= link_to "Editar", edit_schedule_path %> 
+<%= link_to 'Eliminar',schedule , method: :delete,:data{confirm: 'Seguro deseas Eliminar'} %>
+<br>
+<% end %>

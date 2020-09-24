@@ -1,4 +1,6 @@
 class GroupsController < ApplicationController
+
+  before_action :select_id, only: [:edit, :update, :show, :destory]
   def new
   @group = Group.new
   end 
@@ -20,11 +22,20 @@ class GroupsController < ApplicationController
     @group =Group.all
   end
 
+  def destroy
+    redirect_to @group
+  end
+  
+
 
   private
 
   def group_paramns
     params.require(:group).permit(:room,:subject_id)
+  end
+
+  def select_id
+    @group = Group.find params[:id]
   end
   
 

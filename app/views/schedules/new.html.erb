@@ -2,12 +2,4 @@
 <br>
 
 
-<%=form_for @schedule  do |f| %>
-    <%= f.label :Grupo %><br>
-    <%= f.text_field  :group_id %><br>
-    <%= f.label :Profesor %><br>
-    <%= f.text_field  :professor_id %><br>
-    
-
-    <%=f.submit%>
-<% end%>
+<%= render 'form' %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_23_161153) do
+ActiveRecord::Schema.define(version: 2020_09_24_160555) do
 
   create_table "docs", force: :cascade do |t|
     t.string "description"
@@ -76,6 +76,7 @@ ActiveRecord::Schema.define(version: 2020_09_23_161153) do
     t.integer "subject_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "doc"
     t.index ["subject_id"], name: "index_tasks_on_subject_id"
   end
 

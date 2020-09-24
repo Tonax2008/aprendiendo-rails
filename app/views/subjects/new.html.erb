@@ -2,15 +2,4 @@
 <br>
 
 
-<%=form_for @subject, url: subjects_path  do |f| %>
-    <%= f.label :Materia %><br>
-    <%= f.text_field  :name %><br>
-    <%= f.label :Grado %><br>
-    <%= f.text_field  :degree %><br>
-    <%= f.label :Dificultas %><br>
-    <%= f.text_field  :level %><br>
-    
-   
-
-    <%=f.submit%>
-<% end%>
+<%= render 'form' %>

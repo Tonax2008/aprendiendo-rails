@@ -1,2 +1,14 @@
-<h1>Tasks#edit</h1>
-<p>Find me in app/views/tasks/edit.html.erb</p>
+<h1>Editar Tareas</h1>
+
+<%=form_for @task  do |f| %>
+    
+    <%= f.label :Tarea %><br>
+    <%= f.text_field  :name %><br>
+    <%= f.label :materia %><br>
+    <%= f.text_field  :subject_id %><br>
+    <%= f.label :Archvo %><br>
+    <%= f.file_field  :doc %><br>
+   
+
+    <%=f.submit%>
+<% end%>

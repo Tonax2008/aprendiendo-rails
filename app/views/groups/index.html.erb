@@ -1,3 +1,9 @@
+<h1>Groups Index</h1>
+<br>
+<p>Salones</p>
 <%= @group.each do |group| %>
-<%= group.room %>
-<%end%>
+    <%= group.room %>
+    <%= link_to 'Editar', edit_group_path(group) %>
+    <%= link_to 'Eliminar', group, method: :delete, data:{confirm: 'Seguro deseas eliminarlo?'} %>
+    <br>
+<% end %>

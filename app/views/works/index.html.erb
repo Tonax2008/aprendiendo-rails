@@ -1,2 +1,9 @@
 <h1>Works#index</h1>
-<p>Find me in app/views/works/index.html.erb</p>
+<br>
+<p>Trabajos </p>
+<%= @work.each do |work| %>
+    <%= work.task_id %>
+    <%= link_to 'Editar', edit_work_path(work) %>
+    <%= link_to 'Eliminar', work, method: :delete, data:{confirm: 'Seguro deseas eliminarlo?'} %>
+    <br>
+<% end %>

@@ -1,2 +1,9 @@
 <h1>Subject#index</h1>
-<p>Find me in app/views/subject/index.html.erb</p>
+<br>
+<p>Materias </p>
+<%= @subject.each do |subject| %>
+    <%= subject.name %>
+    <%= link_to 'Editar', edit_subject_path(subject) %>
+    <%= link_to 'Eliminar', subject, method: :delete, data:{confirm: 'Seguro deseas eliminarlo?'} %>
+    <br>
+<% end %>
