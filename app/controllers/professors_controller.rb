@@ -14,9 +14,11 @@ class ProfessorsController < ApplicationController
   def create 
       @professor=Professor.new professor_paramns
     
-      @professor.save
+      if @professor.save
       #debugger 
-      redirect_to @professor
+        return redirect_to professor_path
+      end  
+      reder :show
   end
 
   def show

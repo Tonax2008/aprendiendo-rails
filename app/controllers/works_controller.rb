@@ -6,6 +6,7 @@ class WorksController < ApplicationController
   end
 
   def create 
+  
       @work=Work.new work_paramns
     
       @work.save
