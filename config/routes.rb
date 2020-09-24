@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   resources :subjects ,   only: [:index, :create, :show, :destroy,:new,:edit,:update] 
   resources :docs 
   get 'say/new'
-  get 'say/hello'
+  get 'say/hello' 
   get 'say/goodbye'
   
 end

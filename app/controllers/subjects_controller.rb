@@ -8,9 +8,9 @@ class SubjectsController < ApplicationController
       @subject=Subject.new subject_paramns
     
       if @subject.save
-        redirect_to subject_path
+        redirect_to subjects_path
       end
-      #debugger 
+      
   end
 
   def edit

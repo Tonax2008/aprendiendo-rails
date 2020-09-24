@@ -8,14 +8,16 @@ class HoursController < ApplicationController
    def create 
       @hour=Hour.new hours_paramns
     
-      @hour.save
-      #debugger 
+      if @hour.save
+        redirect_to hours_path
+      end
   end
 
   def edit
   end
 
   def index
+    @hour = Hour.all
   end
 
   def show

@@ -9,7 +9,12 @@ class StudentsController < ApplicationController
 
     def create 
         @student= Student.new student_paramns
-        @student.save
+        if  @student.save
+            puts 'Guardado correctamente'
+            redirect_to students_path
+        else 
+            puts 'error al guardar estudiantes'
+        end
     end
 
     def edit
@@ -23,12 +28,13 @@ class StudentsController < ApplicationController
     end
 
     def destroy
-        if @student.destory
-            puts 'Se elimino correctamente'
-            redirect_to @student
-        end
+        
+        redirect_to students_path
+        
 
     end
+
+    
 
     private
 
