@@ -11,8 +11,12 @@
   
 
   <body>
+    <%= link_to 'HOME',root_path %>
+    <br>
     <%- if user_signed_in?%>
-    <%= link_to 'Salir', destroy_user_session_path ,method: :delete %>
+    <div align="right">
+    <%= link_to 'Cerrar Sesion', destroy_user_session_path ,method: :delete %>
+    </div >
     <% else %>
     <%= link_to 'Iniciar', new_user_session_path %>
     <%= link_to 'Resgistrar', new_user_registration_path %>
@@ -20,5 +24,7 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
+    <br>
+    
   </body>
 </html>

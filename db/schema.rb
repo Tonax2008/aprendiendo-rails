@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_24_191030) do
+ActiveRecord::Schema.define(version: 2020_09_25_164804) do
 
   create_table "docs", force: :cascade do |t|
     t.string "description"
@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 2020_09_24_191030) do
     t.integer "professor_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
     t.index ["group_id"], name: "index_schedules_on_group_id"
     t.index ["professor_id"], name: "index_schedules_on_professor_id"
   end

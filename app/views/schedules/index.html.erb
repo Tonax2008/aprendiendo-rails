@@ -1,7 +1,7 @@
 <h1>Schedule#index</h1>
 <%= @schedule.each do |schedule| %>
-<%= @schedue.name%>
-<%= link_to "Editar", edit_schedule_path %> 
+<%= @schedule.name%>
+<%= link_to "Editar", edit_schedule_path(schedule) %> 
 <%= link_to 'Eliminar',schedule , method: :delete,data:{confirm: 'Seguro deseas Eliminar'} %>
 
 
