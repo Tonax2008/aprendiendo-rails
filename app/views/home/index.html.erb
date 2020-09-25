@@ -1,0 +1,10 @@
+<%- if user_signed_in?%>
+<h1>Bienvenido :) <%= current_user.name %> </h1>
+
+    <%= render 'linkHome'%>
+    
+
+
+<%else%>
+<h1> Logeate para poder subir tus tareas</h1>
+<%end%>

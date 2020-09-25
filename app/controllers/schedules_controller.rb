@@ -31,7 +31,7 @@ class SchedulesController < ApplicationController
     private
 
   def schedule_paramns
-      params.require(:schedule).permit(:group_id,:professor_id)
+      params.require(:schedule).permit(:group_id,:professor_id,:name)
   end
 
   def select_id

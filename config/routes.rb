@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  devise_for :users
+  get 'home/index'
+  root to: "home#index"
+
   resources :professors , only: [:index, :create, :show, :destroy,:new,:edit,:update] 
   resources :hours ,      only: [:index, :create, :show, :destroy,:new,:edit,:update] 
   resources :schedules ,  only: [:index, :create, :show, :destroy,:new,:edit,:update] 
