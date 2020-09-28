@@ -1,8 +1,18 @@
 <h1>Tareas index</h1>
 
+<%= @subject_name %>
+<br>
 <%= @task.each do |task| %>
-    <%= task.name %> <%= task.doc %>
+    <%= @task_name.each do |key|%>
+    <%= key[:name] %> <br>
+    <%= task.name %> <br>
+    <%= task.doc %>
+
+    <%# The <%= image_tag task.doc.url %> 
     <%= link_to 'Editar', edit_task_path(task) %>
     <%= link_to 'Eliminar', task, method: :delete, data:{confirm: 'Seguro deseas eliminarlo?'} %>
     <br>
+    <br>
+    <br>
+    <% end %>
 <% end %>

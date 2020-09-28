@@ -4,4 +4,6 @@ class Student < ApplicationRecord
 
     validates :name, presence: true
     validates :promedio, numericality: true
+
+    mount_uploader :photo, PhotoUploader
 end

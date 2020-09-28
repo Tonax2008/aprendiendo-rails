@@ -4,15 +4,18 @@ class TasksController < ApplicationController
 
   def new
   @task = Task.new
+  @task_name=Task.new
+   
+
   end
 
   def create 
     @task=Task.new task_paramns
   
     if @task.save
-    redirect_to task_path
+    redirect_to tasks_path
     else
-      puts "error al guardar  #{@task.errors}"
+      puts "error al guardar  #{@task.errors.full_messages}"
     end
   end
 
@@ -20,18 +23,27 @@ class TasksController < ApplicationController
   end
 
   def index
+  
   @task = Task.all
+  @task_name= Task.all.collect(&:subject)
+  puts @task_name
   end
 
   def show
   end
 
-  def destroy
-    if @task.destory
-      puts 'Se elimino correctamente'
-      redirect_to @task
-    end
+  def update
+    @task.update task_paramns
+    redirect_to tasks_path
   end
+
+  def destroy
+    @task.destroy
+    puts 'Se elimino correctamente'
+    redirect_to tasks_path
+    
+  end
+
   
 
   private

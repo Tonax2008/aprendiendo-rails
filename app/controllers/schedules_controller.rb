@@ -8,7 +8,7 @@ class SchedulesController < ApplicationController
   def create 
       @schedule=Schedule.new schedule_paramns
     
-      if @schedule.save
+      if @schedule.save 
       @schedule
       else 
         puts 'HUbo un error al guardar'
@@ -27,8 +27,14 @@ class SchedulesController < ApplicationController
   def show
   end 
 
+  def update
+    @schedule.update schedule_paramns
+    redirect_to schedule_path
+  end
+
   def destory
-     redirect_to @schedule
+    @schedule.destory
+    redirect_to schedule_path
   end
     private
 

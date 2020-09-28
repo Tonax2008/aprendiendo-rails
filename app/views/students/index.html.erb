@@ -1,6 +1,8 @@
 <h1>Alumnos Index</h1>
 <%= @student.each do |student| %>
-<%= @student.name %>
+<%= image_tag student.photo.short.url %> <br>
+<%= student.name %>
+
 <%= link_to "Editar", edit_student_path(student) %> 
 <%= link_to 'Eliminar', student, method: :delete, data:{confirm: 'Seguro deseas eliminarlo?'} %>
 <br>

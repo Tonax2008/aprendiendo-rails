@@ -23,8 +23,15 @@ class HoursController < ApplicationController
   def show
   end
 
+  def update
+    @hour.update hours_paramns
+    redirect_to hours_path
+  end
+
   def destroy
-    redirect_to @hour
+
+    @hour.destory
+    redirect_to hours_path
   end
   
   private

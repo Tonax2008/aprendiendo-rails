@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_25_164804) do
+ActiveRecord::Schema.define(version: 2020_09_28_222446) do
 
   create_table "docs", force: :cascade do |t|
     t.string "description"
@@ -62,6 +62,7 @@ ActiveRecord::Schema.define(version: 2020_09_25_164804) do
     t.decimal "promedio"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
   end
 
   create_table "subjects", force: :cascade do |t|

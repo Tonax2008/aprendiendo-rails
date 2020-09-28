@@ -19,11 +19,23 @@ class GroupsController < ApplicationController
   end
 
   def index
-    @group =Group.all
+    @group =Group.all 
+  end
+
+  def edit
+    
+  end
+
+  def update
+    @group.update group_paramns
+    redirect_to groups_path
   end
 
   def destroy
-    redirect_to @group
+
+  
+    @group.destroy
+    redirect_to groups_path
   end
   
 

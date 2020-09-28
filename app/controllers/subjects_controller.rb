@@ -18,13 +18,20 @@ class SubjectsController < ApplicationController
 
   def index
     @subject = Subject.all
+    #@subject_room = Subject.all.pluck.group(:room)
   end
 
   def show
   end
+
+  def update
+    @subject.update subject_paramns
+    redirect_to subjects_path
+  end
   
   def destroy
-    redirect_to @subject
+    @subject.destroy
+    redirect_to subjects_path
   end
   
 

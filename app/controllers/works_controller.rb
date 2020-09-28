@@ -7,13 +7,12 @@ class WorksController < ApplicationController
 
   def create 
   
-      @work=Work.new work_paramns
-    
-      if @work.save
-        redirect_to work_path
-      else
-        puts "ocurrio un error al guardar #{ @work.errors}"
-      end
+    @work=Work.new work_paramns
+    if @work.save
+      redirect_to works_path
+    else
+      puts "ocurrio un error al guardar #{ @work.errors.full_messagess}"
+    end
   end
 
 
@@ -27,8 +26,15 @@ class WorksController < ApplicationController
   def show
   end
 
+  def update
+    @work.update work_paramns
+    redirect_to works_path
+
+  end
+
   def destroy
-    redirect_to @work
+    @work.destroy
+    redirect_to works_path
   end
     private
 
