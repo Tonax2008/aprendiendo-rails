@@ -1,5 +1,8 @@
 <h1>Groups Index</h1>
-<br>
+
+<%- if user_signed_in?%>
+<h1>Bienvenido :) <%= current_user.name %> </h1>
+
 <p>Salones</p>
 <%= @group.each do |group| %>
     <%= group.room %>
@@ -7,3 +10,11 @@
     <%= link_to 'Eliminar', group, method: :delete, data:{confirm: 'Seguro deseas eliminarlo?'} %>
     <br>
 <% end %>
+
+<%else%>
+<h1> Logeate para poder subir tus tareas</h1>
+<%end%>
+
+
+
+<br>

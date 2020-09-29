@@ -1,6 +1,6 @@
 <h1>Alumnos Index</h1>
 <%= @student.each do |student| %>
-<%= image_tag student.photo.short.url %> <br>
+<%= image_tag student.photo.url %> <br>
 <%= student.name %>
 
 <%= link_to "Editar", edit_student_path(student) %> 

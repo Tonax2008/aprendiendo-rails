@@ -1,6 +1,7 @@
 class WorksController < ApplicationController
 
   before_action :select_id,only: [:edit, :update, :show, :destory]
+  before_action :authenticate_user!
   def new
   @work = Work.new
   end

@@ -1,6 +1,7 @@
 class TasksController < ApplicationController
 
-  before_action :select_id, only: [:edit, :update, :show, :destory]
+  before_action :select_id, only: [:edit, :update, :show, :destory] 
+  before_action :user_validation!
 
   def new
   @task = Task.new

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  devise_for :users
+  devise_for :users 
   get 'home/index'
   root to: "home#index"
 
@@ -13,10 +13,10 @@ Rails.application.routes.draw do
   resources :students ,   only: [:index, :create, :show, :destroy,:new,:edit,:update] 
   resources :subjects ,   only: [:index, :create, :show, :destroy,:new,:edit,:update] 
   resources :docs 
+
   get 'say/new'
   get 'say/hello' 
   get 'say/goodbye'
-  
 end
 
 

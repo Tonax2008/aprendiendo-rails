@@ -47,11 +47,11 @@ ActiveRecord::Schema.define(version: 2020_09_28_222446) do
   end
 
   create_table "schedules", force: :cascade do |t|
+    t.string "name"
     t.integer "group_id"
     t.integer "professor_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "name"
     t.index ["group_id"], name: "index_schedules_on_group_id"
     t.index ["professor_id"], name: "index_schedules_on_professor_id"
   end
